@@ -1,0 +1,85 @@
+#setting up display with minimal xorg packages
+apt-get install --no-install-recommends \
+xserver-xorg-core \
+xserver-xorg-video-intel \
+xserver-xorg-input-libinput \
+libinput-tools \
+x11-xserver-utils \
+x11-xkb-utils \
+x11-utils \
+dbus-x11 \
+dbus-user-session \
+xdg-utils \
+xdg-user-dirs \
+rtkit \
+xsettingsd \
+brightnessctl \
+brightness-udev
+
+#setting up openbox
+apt-get install --no-install-recommends \
+openbox \
+polybar \
+picom \
+hsetroot \
+slim \
+rxvt-unicode \
+i3lock \
+dunst \
+scrot \
+
+#setting up audio
+apt-get install --no-install-recommends \
+pipewire-pulse \
+pipewire-audio \
+wireplumber \
+libspa-0.2-bluetooth
+
+#packages for productivity
+apt-get install --no-install-recommends \
+ibreoffice-writer \
+libreoffice-gtk3 \
+libreoffice-impress \
+libreoffice-calc \
+firefox-esr \
+gimp \
+neovim \
+openssh-client \
+git \
+geany \
+
+#the rest of the packages
+apt-get install --no-install-recommends \
+htop \
+zsh \
+ranger \
+xarchiver \
+pcmanfm \
+lxpolkit \
+
+#personal packages
+apt-get install --no-install-recommends \
+adb \
+fastboot \
+
+
+#nice to have but not essential (or in other word, gnome package)
+#apt-get install --no-install-recommends \
+#gucharmap \
+#gparted \
+#nautilus \
+#policykit-1-gnome \
+#gvfs \
+#gvfs-backends \
+#gvfs-fuse \
+#evince
+
+
+
+
+
+
+
+
+
+
