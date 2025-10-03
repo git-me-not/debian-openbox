@@ -1,85 +1,109 @@
-#setting up display with minimal xorg packages
+# --- Display server with xorg minimal ---
 apt-get install --no-install-recommends \
 xserver-xorg-core \
-xserver-xorg-video-intel \
 xserver-xorg-input-libinput \
 libinput-tools \
 x11-xserver-utils \
 x11-xkb-utils \
 x11-utils \
 dbus-x11 \
-dbus-user-session \
 xdg-utils \
 xdg-user-dirs \
 rtkit \
 xsettingsd \
-brightnessctl \
-brightness-udev
 
-#setting up openbox
-apt-get install --no-install-recommends \
+# --- minimal window management ---
 openbox \
 polybar \
 picom \
 hsetroot \
 slim \
-rxvt-unicode \
 i3lock \
 dunst \
-scrot \
+brightnessctl \
+brightness-udev \
+lxappearance \
+gtk2-engines-pixbuf \
 
-#setting up audio
-apt-get install --no-install-recommends \
+# --- audio management ---
 pipewire-pulse \
 pipewire-audio \
 wireplumber \
-libspa-0.2-bluetooth
+libspa-0.2-bluetooth \
 
-#packages for productivity
-apt-get install --no-install-recommends \
+# --- file management ---
+pcmanfm \
+#gvfs \
+#gvfs-backends \
+#gvfs-fuse \
+#udisks2 or udevil \
+
+# --- terminal-based programs ---
+rxvt-unicode \
+ranger \
+w3m \
+w3m-img \
+neovim \
+git \
+wget \
+less \
+htop \
+highlight \
+file \
+
+# --- productivity ---
 ibreoffice-writer \
 libreoffice-gtk3 \
 libreoffice-impress \
 libreoffice-calc \
 firefox-esr \
 gimp \
-neovim \
-openssh-client \
-git \
 geany \
+#zathura \
+
+# --- multimedia ---
+mpv \
+ffmpeg \
+viewnior \
+yt-dlp \
+scrot \
 
 #the rest of the packages
 apt-get install --no-install-recommends \
-htop \
-zsh \
-ranger \
 xarchiver \
-pcmanfm \
 lxpolkit \
+mpv \
+dosfstools \
+gzip \
+mtp-tools \
+libmtp-runtime \
+libmtp-common \
+tlp \
+acpid \
+p7zip-full \
+libnotify-bin \
+ca-certificates \
+openssh-client \
+
 
 #personal packages
 apt-get install --no-install-recommends \
 adb \
 fastboot \
+zsh
 
 
-#nice to have but not essential (or in other word, gnome package)
+#nice to have but not now
 #apt-get install --no-install-recommends \
 #gucharmap \
 #gparted \
 #nautilus \
 #policykit-1-gnome \
-#gvfs \
-#gvfs-backends \
-#gvfs-fuse \
 #evince
+#obs-studio
 
-
-
-
-
-
-
-
-
-
+#music player (idk, only listen music through yt web)
+#apt-get install --no-install-recommends \
+#cmus
+#mpd
+#ncmpcpp
