@@ -23,6 +23,7 @@ dunst \
 brightnessctl \
 brightness-udev \
 lxappearance \
+lxappearance-obconf \
 gtk2-engines-pixbuf \
 
 # --- audio management ---
