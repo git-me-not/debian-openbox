@@ -4,7 +4,7 @@ Debian openbox dotfiles
 \
 WM        = Openbox \
 Bar       = Polybar \
-Launcher  = Openbox's menu
+Launcher  = obmenu-generator
 \
 \
 # about pipewire.config
