@@ -1,0 +1,175 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+background = #FDFDFD
+background-alt = #FDFDFD
+foreground = #0a62ff
+primary = #4b72ff
+secondary = #000000
+alert = #000000
+disabled = #000000
+font = #4b72ff
+
+[bar/example]
+width = 100%
+height = 30pt
+spacing = 4
+padding = 2
+dpi-x = 96
+dpi-y = 96
+border-bottom-size = 2pt
+border-color = ${colors.foreground}
+background = ${colors.background}
+foreground = ${colors.font}
+
+module-margin = 1
+
+separator = |
+separator-foreground = ${colors.disabled}
+
+font-0 = SpaceMono Nerd Font:weight=medium:size=11;2
+font-1 = SpaceMono Nerd Font:weight=bold:size=11;2
+
+modules-left = xworkspaces
+modules-center = date
+modules-right = pulseaudio battery memory cpu wlan
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+enable-ipc = true
+
+; wm-restack = generic
+; wm-restack = bspwm
+; wm-restack = i3
+
+; override-redirect = true
+
+[module/systray]
+type = internal/tray
+format-margin = 8pt
+tray-spacing = 16pt
+
+[module/xworkspaces]
+type = internal/xworkspaces
+label-active = %name%
+label-active-font = 2
+label-active-padding = 1
+
+label-occupied = %name%
+label-occupied-padding = 1
+
+label-urgent = %name%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = %name%
+label-empty-foreground = ${colors.disabled}
+label-empty-padding = 1
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume-prefix = ""
+format-volume-prefix-margin-right = 2
+format-volume-prefix-foreground = ${colors.primary}
+format-volume = <label-volume>
+
+label-volume = %percentage%%
+
+label-muted = muted
+label-muted-foreground = ${colors.disabled}
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+poll-interval = 4
+label-charging = %percentage%% 󱐋
+format-charging = <label-charging>
+format-full-prefix = ""
+format-charging-prefix = ""
+format-discharging-prefix = ""
+format-full-prefix-margin-right = 2
+format-charging-prefix-margin-right = 2
+format-discharging-prefix-margin-right = 2
+format-full-prefix-foreground = ${colors.primary}
+format-charging-prefix-foreground = ${colors.primary}
+format-discharging-prefix-foreground = ${colors.primary}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = ""
+format-prefix-margin-right = 2
+format-prefix-foreground = ${colors.primary}
+label = %percentage_used:2%%
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = ""
+format-prefix-margin-right = 2
+format-prefix-foreground = ${colors.primary}
+label = %percentage%%
+
+[network-base]
+type = internal/network
+interval = 5
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-disconnected =  %{F#707880} disconnected
+
+[module/wlan]
+inherit = network-base
+interface-type = wireless
+format-connected-prefix = ""
+format-connected-prefix-margin-right = 2
+format-connected-prefix-foreground = ${colors.primary}
+label-connected =  %essid%
+
+[module/date]
+type = internal/date
+date = %H:%M
+date-alt = %d-%m-%Y %H:%M
+;format-prefix = ""
+format-prefix-margin-right = 2
+format-prefix-foreground = ${colors.primary}
+label = %date%
+label-font = 2
+label-foreground = ${colors.primary}
+
+[module/calendar]
+type = internal/date 
+date= %d-%m-%Y
+format-prefix = ""
+format-prefix-margin-right = 2
+format-prefix-foreground = ${colors.primary}
+label = %date%
+label-foreground = ${colors.primary}
+
+[settings]
+screenchange-reload = true
+pseudo-transparency = true
+
+; vim:ft=dosini
