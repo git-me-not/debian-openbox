@@ -1,0 +1,24 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/x86_64-linux-gnu/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/x86_64-linux-gnu/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+#polybar example &
+#polybar bottom &
+tint2 -c ~/.config/tint2/blue.tint2rc &
+#polybar -c ~/.config/polybar/ryan/config.ini &
+hsetroot -cover ~/.config/miki.png
+#picom &
+urxvt -name stickynote -geometry 37x13-20+20 -e vim -c "set laststatus=0 | set noruler" note.txt; sleep infinity &
