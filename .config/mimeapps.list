@@ -1,0 +1,30 @@
+[Added Associations]
+image/png=viewnior.desktop;
+application/x-trash=geany.desktop;
+image/jpeg=org.gnome.gThumb.desktop;viewnior.desktop;
+font/collection=xarchiver.desktop;
+application/x-apple-diskimage=xarchiver.desktop;
+application/zip=xarchiver.desktop;
+application/pdf=firefox-esr.desktop;onlyoffice-desktopeditors.desktop;libreoffice-draw.desktop;
+application/vnd.debian.binary-package=xarchiver.desktop;
+application/x-shellscript=geany.desktop;
+application/x-glade=geany.desktop;
+application/octet-stream=geany.desktop;
+application/x-zerosize=geany.desktop;
+text/markdown=geany.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;onlyoffice-desktopeditors.desktop;
+text/plain=geany.desktop;libreoffice-writer.desktop;
+video/mp4=mpv.desktop;vlc.desktop;
+
+[Default Applications]
+image/png=viewnior.desktop
+image/jpeg=viewnior.desktop
+application/zip=xarchiver.desktop
+text/html=firefox-esr.desktop
+x-scheme-handler/http=firefox-esr.desktop
+x-scheme-handler/https=firefox-esr.desktop
+x-scheme-handler/about=firefox-esr.desktop
+x-scheme-handler/unknown=firefox-esr.desktop
+application/octet-stream=geany.desktop
+application/x-zerosize=geany.desktop
+text/markdown=geany.desktop
