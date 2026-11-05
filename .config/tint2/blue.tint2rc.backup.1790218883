@@ -1,0 +1,57 @@
+# ─────────────────────────────────────
+# Background 1: white with blue top border
+# ─────────────────────────────────────
+
+rounded = 0
+border_width = 3
+border_sides = T
+background_color = #FDFDFD 100
+border_color = #448AFF 100
+
+
+# ─────────────────────────────────────
+# Panel
+# ─────────────────────────────────────
+
+panel_items = EFB:C
+panel_position = bottom center horizontal
+panel_size = 100% 37
+panel_margin = 0 0
+panel_padding = 0 0 0
+panel_background_id = 1
+
+# Test
+execp = new
+execp_command = ~/.config/tint2/workspaces.sh
+execp_lclick_command = ~/.config/tint2/workspaces-click.sh
+execp_continuous = 1
+execp_markup = 1
+execp_has_icon = 0
+execp_font = GD-MadoMaruGothicJA-OTF 10
+execp_font_color = #448AFF 100
+execp_padding = 5 2
+execp_tooltip = 
+
+# Battery
+bat1_format =   %p
+bat1_font = SpaceMono Nerd Font bold 10
+battery_font_color = #448AFF 100
+battery_padding = 10 2
+
+# Separator 1
+separator = new
+separator_color = #3584e4 100
+separator_style = line
+separator_size = 3
+separator_padding = 10 10
+
+# ─────────────────────────────────────
+# Clock
+# ─────────────────────────────────────
+
+time1_format = %H:%M
+time1_font = SpaceMono Nerd Font bold 10
+clock_font_color = #448AFF 100
+clock_padding = 10 2
+clock_background_id = 0
+clock_tooltip = %A, %d %B %Y
